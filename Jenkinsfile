@@ -16,6 +16,7 @@ pipeline {
         booleanParam(name: "DEBUG", defaultValue: false, description: "")
     }
     environment {
+        CI = 1
         REFERRAL_API_KEY = credentials("REFERRAL_API_KEY")
         BRAVE_GOOGLE_API_KEY = credentials("npm_config_brave_google_api_key")
         BRAVE_ARTIFACTS_S3_BUCKET = credentials("brave-jenkins-artifacts-s3-bucket")
